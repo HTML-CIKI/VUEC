@@ -1,5 +1,16 @@
+ <!--公用组件：Tree 组件
+    /**
+     * 树形结构组件
+     * @module ../components/tree/tree
+     * @desc 生成一个树形图结构
+     * @author LieZuoPing
+     * @date 2018年7月30日11点
+     * @example 调用示例：
+     *  <Tree  @on-click="tapTreeItem"></Tree>
+     */
+-->
 <template>
-  <ul class="vuec-tree">
+  <ul class="vuec_tree">
     <li v-for="(item, index) in nodeData.child" :key="item.id">
       <div class="item" @click.stop ="tapFather(item)" :style="{border: `${item.sex === 1 ? boyBorder : girlBorder}` }">
           <span>{{item.title}}</span>
@@ -11,8 +22,8 @@
               <span>{{item.spouse[0].name}}</span>
           </div>
       </div>
-      <em class="lineLeft" v-if="index !== 0" :data="index"></em>
-      <em class="lineRight" v-if="(index) !== (nodeData.child.length-1)" :data="nodeData.child.length"></em>
+      <em class="line_left" v-if="index !== 0" :data="index"></em>
+      <em class="line_right" v-if="(index) !== (nodeData.child.length-1)" :data="nodeData.child.length"></em>
       <!-- 递归组件自己 -->
       <Tree v-if="item.child.length !==0" :nodeData="item"></Tree>
     </li>
@@ -52,7 +63,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
-@import './tree.style';
+@import './tree';
 ul {
     display: flex;
     margin: 10px 30px;
@@ -73,8 +84,8 @@ ul {
     .item, .spouse{
       display: block;
       margin: 0 auto;
-      background: $itemBackgroundColor;
-      border: $treeNodeBorder;
+      background: $item_back_color;
+      border: $tree_node_border;
       margin-bottom: px2rem(60px);
       span{
         width: px2rem(120px);
@@ -89,12 +100,12 @@ ul {
     }
     .item {
       position: relative;
-      background: $itemBackgroundColor;
+      background: $item_back_color;
     }
     .spouse {
       position: absolute;
       left: px2rem(140px);
-      border: $spouseBorder;
+      border: $spouse_border;
       top:0;
     }
     .spouse::after{
@@ -103,7 +114,7 @@ ul {
       position: absolute;
       width: px2rem(20px);
       height: 3px;
-      background: $treeBorderColor;
+      background: $tree_border_color;
       left: px2rem(-20px);
       z-index: -1;
       top:px2rem(80px);
@@ -114,7 +125,7 @@ ul {
       position: absolute;
       width: 3px;
       height: px2rem(34px);
-      background: $treeBorderColor;
+      background: $tree_border_color;
       left: px2rem(58px);
       z-index: -1;
       bottom:px2rem(-30px);
@@ -125,25 +136,25 @@ ul {
       position: absolute;
       width: 3px;
       height: px2rem(34px);
-      background: $treeBorderColor;
+      background: $tree_border_color;
       left: px2rem(58px);
       z-index: -1;
       top: px2rem(-36px);
     }
-    .lineLeft,.lineRight {
+    .line_left,.line_right {
       display: block;
       position: absolute;
       height: 3px;
-      background: $treeBorderColor;
+      background: $tree_border_color;
       z-index: -1;
       right: 50%;
       top: px2rem(-34px);
       left: px2rem(-30px);
     }
-    .lineRight {
+    .line_right {
       right: px2rem(30px);
       left: 50%;
-      background: $treeBorderColor;
+      background: $tree_border_color;
     }
   }
 }

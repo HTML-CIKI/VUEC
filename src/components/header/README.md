@@ -8,11 +8,11 @@
 
 | name           | default  | explain    |
 | --------       | -----:   | :----:     |
-| $position-type | absolute | 位置属性    |
-| $header-background-color |  #277ba6 | 头部背景色    |
-| $header-height |  px2rem(100px) | 整体高度    |
-| $header-font-color | #fff; | 字体颜色    |
-| $header-font-size |  px2rem(40px)| 字体大小|
+| $position_type | absolute | 位置属性    |
+| $header_background_color |  #277ba6 | 头部背景色    |
+| $header_height |  px2rem(100px) | 整体高度    |
+| $header_font_color | #fff; | 字体颜色    |
+| $header_font_size |  px2rem(40px)| 字体大小|
 
 > props 说明
 

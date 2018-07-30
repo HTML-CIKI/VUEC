@@ -70,9 +70,11 @@
 
 | name          | default                  |   explain      |
 | --------      |  -----:                  | :----:        |
-|$titleBakColor  | #b1b1b1 | 标题背景色 |
-|$treeBorderColor  | seagreen | 连线边框 |
-|$itemBackgroundColor  | #fff | 节点基础背景色 |
+|$title_back_color  | #b1b1b1 | 标题背景色 |
+|$tree_node_border  |  solid 1px #afcd50 | 父系元素边框 |
+|$spouse_border  | solid 1px pink| 母系素边框 |
+|$tree_border_color  | seagreen | 连线边框 |
+|$item_back_color  | #fff | 节点基础背景色 |
 
 >events: tap-father(e),tap-mather(e)
 

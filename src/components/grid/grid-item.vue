@@ -33,11 +33,15 @@ export default {
   created () {
   },
   methods: {
-    fnClick (e) {
+    /**
+     * @desc 暴露点击事件
+     * @param { String } url - 跳转的url参数
+     */
+    fnClick (url) {
       this.tabitem(this.$props.gridItemData)
-      if (e !== '') {
+      if (url !== '') {
         this.$router.push({
-          path: e
+          path: url
         })
       }
     },
@@ -51,17 +55,17 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 @import '../../style/config.base';
-@import './grid.style';
+@import './grid';
 .vuec_grid_item {
-  padding: $grid-item-padding;
+  padding: $grid_item_padding;
   box-sizing: border-box;
-  background:$grid-item-background-color;
+  background:$grid_item_bg_color;
   text-align: center;
   width: 100%;
   display: block;
   text-decoration: none;
-  font-size: $font-size;
-  color: $font-color;
+  font-size: $font_size;
+  color: $font_color;
   position: relative;
   overflow: hidden;
   &:before {
@@ -71,12 +75,12 @@ export default {
     @include border_bottom_point5_line($border_color);
   }
   &:hover{
-    background: $grid-item-hover-background-color;
+    background: $grid_item_hover_bg_color;
     color: red;
   }
   img {
     display: block;
-    width: $gird-item-img-width;
+    width: $gird_item_img_width;
     margin: 0 auto;
   }
 }

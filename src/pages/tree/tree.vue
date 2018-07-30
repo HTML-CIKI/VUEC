@@ -1,3 +1,16 @@
+ <!--公用组件：Tree 组件
+    /**
+     * 树形结构组件
+     * @module ../components/tree/tree
+     * @desc 组件描述
+     * @author LieZuoPing
+     * @date 2018年7月24日17点
+     * @param {Object} [title]    - 参数说明
+     * @param {String} [columns] - 参数说明
+     * @example 调用示例
+     *  <c-button :title="title" :columns="columns" :tableData="tableData"></c-button>
+     */
+-->
 <template>
 <div class="tree_wrap">
   <div class="tree" :style="{minWidth: width}" ref="tree">

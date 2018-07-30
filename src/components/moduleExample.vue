@@ -103,7 +103,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
   @import '../../style/config.base';
-  .mask-demo {
+  .vuec_mod_btn_warp {
     width: 100%;
     height: 100%;
     box-sizing: border-box;

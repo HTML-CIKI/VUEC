@@ -39,9 +39,19 @@ tabbarConfig: {
 
 > sass 变量说明
 
+| name          | default                  |   explain      |
+| --------      |  -----:                  | :----:        |
+|$position_type  | absolute | 定位类型 |
+|$tabbar_border_color  |  #e0e0e0 | 边框颜色 |
+|$tabbar_height | 100px | tabbar 高度定义 |
+|$tabbar_border  | linear-gradient(270deg, transparent 50%, $tabbar_border_color 50%)| 有边框0.5px |
+|tabbar_top_border_color | linear-gradient(0deg, transparent 50%, $tabbar_border_color 50%); | 上下边框0.5px |
+|$tabbar_icon_width | 20px | 图标宽度 |
+|$tabbar_font_size | 14px | 字体大小 |
+
 ```bash
 @import '../../style/config.base.scss'; # 公共样式引入
-$position-type: absolute; # 定位类型，#app定义了width： 100%，height: 100%,时用的，如果没有定义，请自己定义为position：fixed；
+$position_type: absolute; # 定位类型，#app定义了width： 100%，height: 100%,时用的，如果没有定义，请自己定义为position：fixed；
 $tabbar-height: 100px; # tabbar 高度定义
 $tabbar-border-color: #e0e0e0;
 $tabbar-border:linear-gradient(90deg, transparent 50%, $tabbar-border-color 50%); # 左右边框0.5px
