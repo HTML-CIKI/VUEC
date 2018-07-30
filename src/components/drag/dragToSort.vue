@@ -67,7 +67,7 @@ export default {
   },
   methods: {
     /**
-     * 计算每个元素的位置区域, 及位置，offsetLeft， offsetTop
+     * @desc 计算每个元素的位置区域及位置，offsetLeft， offsetTop
      */
     calculateOptionArr () {
       let dragDomArr = this.$refs.dragWrap.childNodes
@@ -79,8 +79,8 @@ export default {
       }
     },
     /**
-     * 计算有多少行row，多少列col
-     * @param Array [{}]
+     * @desc 计算有多少行row，多少列col
+     * @param { Array } [{}]
      */
     calculateRowAndCol (arr) {
       let colArr = [] // 列
@@ -95,8 +95,11 @@ export default {
       return {rowArr, colArr}
     },
     /**
-     * calculate
-     */
+     * @desc 计算移动到了哪一个位置
+     * @param { Number } x - 传入当前的x位置
+     * @param { Number } y - 传入当前的y位置
+     * @param { Array } arr - 原来各个位置的数据数组
+      */
     calculateRelIndex (x, y, arr) {
       let { colArr, rowArr } = this.calculateRowAndCol(arr)
       let col = colArr.length // 列数
@@ -131,8 +134,8 @@ export default {
       return replaceIndex
     },
     /**
-     * 目标数组重新排序
-     * @param Number: index
+     * @desc 目标数组重新排序
+     * @param { Number } index
      */
     renewSort (index) {
       let dragArr = this.moveArr[this.dragId]
@@ -163,7 +166,8 @@ export default {
       this.moveOptionArr = [...this.resetData]
     },
     /**
-     * 长安闪亮,
+     * @desc 长安闪烁
+     * @param { Number } index - 长按的元素当前index
      */
     fnPress (index) {
       console.log(0)
@@ -171,7 +175,7 @@ export default {
       this.modStyle.animationName = 'borderLight'
     },
     /**
-     * 拖拽开始记录拖拽的index
+     * @desc 拖拽开始记录拖拽的index
      */
     fnStart (index) {
       // 每次拖拽前，清空
@@ -187,7 +191,8 @@ export default {
       this.move.y = this.moveOptionArr[this.dragId].offsetTop
     },
     /**
-     * 拖拽移动
+     * @desc 拖拽移动
+     * @param { Object } event - 当前元素移动的event对象
      */
     fnMove (event) {
       if (!this.lock) {
@@ -223,7 +228,7 @@ export default {
       this.moveOptionArr[this.dragId].offsetTop = y
     },
     /**
-     * 拖拽结束，计算当前的位置，并且重新排序数组
+     * @desc 拖拽结束，计算当前的位置，并且重新排序数组
      */
     fnMoveEnd (e) {
       if (!this.lock) {
@@ -247,7 +252,7 @@ export default {
       this.renewSort(targetIndex)
     },
     /**
-     * 取消排序
+     * @desc 取消排序
      */
     fnCancelMove () {
       this.animName = ''
