@@ -49,7 +49,7 @@ export default {
   @import '../../style/config.base';
   .vuec-mask-demo {
     position: fixed;
-    @include locationEle(0,0,0,0);
+    @include location_ele(0,0,0,0);
     background: rgba(0,0,0,0.7);
     z-index: 999;
     box-sizing: border-box;

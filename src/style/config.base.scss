@@ -1,12 +1,20 @@
+/**
+ * @module 'style/config.base'
+ * @desc 公用sass变量、函数、mixin 等分装
+ * @author LieZuoPing
+ * @date  2018年7月30日9:52点
+ * @example 调用示例
+ * @import './config.base'
+ */
 
 // 公共样式，sass变量
-$browser-default-font-size: 75px !default; // sass 跟聚设计图定义默认rem更元素，设计图的1/10
-$border-color: #d9d9d9;
-$border-1px-top:linear-gradient(90deg, transparent 50%, $border-color 50%); // 左右边框0.5px
-$border-1px-left: linear-gradient(270deg, transparent 50%, $border-color 50%); // 上下边框
+$browser_default_font_size: 75px !default; // sass 跟聚设计图定义默认rem更元素，设计图的1/10
+$border_color: #d9d9d9;
+$border_1px_top:linear-gradient(90deg, transparent 50%, $border_color 50%); // 左右边框0.5px
+$border_1px_left: linear-gradient(270deg, transparent 50%, $border_color 50%); // 上下边框
 //sass px 转rem函数
 @function px2rem($px){//$px为需要转换的字号
-  @return $px / $browser-default-font-size * 1rem;
+  @return $px / $browser_default_font_size * 1rem;
 }
 
 // 创建一个颜色随机函数
@@ -16,7 +24,7 @@ $border-1px-left: linear-gradient(270deg, transparent 50%, $border-color 50%); /
 
 
 // sass,伪元素边框定义
-@mixin before-after-common {
+@mixin before_after_common {
   content: ' ';
   display: block;
   position: absolute;
@@ -27,7 +35,7 @@ $border-1px-left: linear-gradient(270deg, transparent 50%, $border-color 50%); /
 }
 
 // 元素定位mixin
-@mixin locationEle ($top: none, $bottom: none, $left: none, $right:none) {
+@mixin location_ele ($top: none, $bottom: none, $left: none, $right:none) {
   left: $left;
   right: $right;
   top: $top;
@@ -35,51 +43,51 @@ $border-1px-left: linear-gradient(270deg, transparent 50%, $border-color 50%); /
 }
 
 // 伪元素上边框0.5px实现方法
-@mixin border-top-point5-line ($border-color: #d9d9d9){
-  @include before-after-common;
-  @include locationEle(0, none, 0, 0);
+@mixin border_top_point5_line ($border_color: #d9d9d9){
+  @include before_after_common;
+  @include location_ele(0, none, 0, 0);
   height: 1px;
   width: 100%;
-  border-top: 1px solid $border-color;
-  color: $border-color;
+  border-top: 1px solid $border_color;
+  color: $border_color;
   -webkit-transform: scaleY(0.5);
   transform: scaleY(0.5);
 }
 
 // 伪元素下边框0.5px实现方法
-@mixin border-bottom-point5-line ($border-color: #d9d9d9){
-  @include before-after-common;
-  @include locationEle(none, -1px, 0, 0);
+@mixin border_bottom_point5_line ($border_color: #d9d9d9){
+  @include before_after_common;
+  @include location_ele(none, -1px, 0, 0);
   height: 2px;
-  border-bottom: 1px solid $border-color;
-  color: $border-color;
+  border-bottom: 1px solid $border_color;
+  color: $border_color;
   -webkit-transform: scaleY(0.5);
   transform: scaleY(0.5);
 }
 
-// 伪元素左边2框0.5px实现方法
-@mixin border-left-point5-line ($border-color: #d9d9d9){
-  @include before-after-common;
-  @include locationEle(0, 0, 0, none);
+// 伪元素左边框0.5px实现方法
+@mixin border_left_point5_line ($border_color: #d9d9d9){
+  @include before_after_common;
+  @include location_ele(0, 0, 0, none);
   width: 1px;
   height: 100%;
-  border-left: 1px solid $border-color;
-  color: $border-color;
+  border-left: 1px solid $border_color;
+  color: $border_color;
   -webkit-transform: scaleX(0.5);
   transform: scaleX(0.5);
 }
 
 // 伪元素右框0.5px实现方法
-@mixin border-right-point5-line ($border-color: #d9d9d9){
-  @include before-after-common;
-  @include locationEle(0, 0, none, 0);
+@mixin border_right_point5_line ($border_color: #d9d9d9){
+  @include before_after_common;
+  @include location_ele(0, 0, none, 0);
   width: 1px;
   height: 100%;
-  border-left: 1px solid $border-color;
-  color: $border-color;
+  border-left: 1px solid $border_color;
+  color: $border_color;
   -webkit-transform: scaleX(0.5);
   transform: scaleX(0.5);
 }
 
 
-$demo-background-color: #fff;
+$demo_background_color: #fff;

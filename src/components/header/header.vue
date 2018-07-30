@@ -43,7 +43,7 @@ export default {
 @import './header.style';
 .vuec-cheader {
   position: $position-type;
-  @include locationEle(0,none,0,0);
+  @include location_ele(0,none,0,0);
   background:$header-background-color;
   height: $header-height;
   font-size: $header-font-size;

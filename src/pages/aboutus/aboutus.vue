@@ -31,11 +31,11 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
   @import '../../style/config.base.scss';
-  $demo-background-color: #fff;
+  $demo_background_color: #fff;
   .aboutus {
     width: 100%;
     height: 100%;
-    background: $demo-background-color;
+    background: $demo_background_color;
     box-sizing: border-box;
   }
 </style>

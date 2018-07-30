@@ -27,6 +27,7 @@
 
 <script>
 import {Gird, GirdItem} from '../../components'
+import { api } from '../../service/index'
 import testData from './gird.test.data'
 export default {
   name: 'GirdDemo',
@@ -49,7 +50,7 @@ export default {
   methods: {
     async getLoaclList () {
       let that = this
-      await that.$axios.get('../../../static/json/test.json')
+      await that.$axios.get(api.testData)
         .then(function (res) {
           that.shopList = res.data
         })
@@ -67,7 +68,7 @@ export default {
   .GirdDemo {
     width: 100%;
     height: 100%;
-    background: $demo-background-color;
+    background: $demo_background_color;
     box-sizing: border-box;
     .cell {
       padding: 10px 10px;
@@ -75,17 +76,17 @@ export default {
     }
     .gird {
       &:after {
-        @include border-top-point5-line($border-color)
+        @include border_top_point5_line($border_color)
       }
       .shopImg{
         width: 80%;
       }
       .div{
         &:before {
-          @include border-right-point5-line($border-color);
+          @include border_right_point5_line($border_color);
         }
         &:after {
-          @include border-bottom-point5-line($border-color);
+          @include border_bottom_point5_line($border_color);
         }
       }
     }

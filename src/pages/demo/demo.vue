@@ -40,7 +40,7 @@ export default {
     width: 100%;
     height: 100%;
     position: relative;
-    background: $demo-background-color;
+    background: $demo_background_color;
     box-sizing: border-box;
   }
 </style>

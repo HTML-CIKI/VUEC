@@ -34,10 +34,10 @@ export default {
   overflow: hidden;
   justify-content:flex-start;
   &:before {
-    @include border-top-point5-line($border-color);
+    @include border_top_point5_line($border_color);
   }
   &:before {
-    @include border-left-point5-line($border-color);
+    @include border_left_point5_line($border_color);
   }
 }
 

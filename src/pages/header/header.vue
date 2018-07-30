@@ -37,7 +37,7 @@ export default {
   .vuec-header-demo {
     width: 100%;
     height: 100%;
-    background: $demo-background-color;
+    background: $demo_background_color;
     box-sizing: border-box;
     h3 {
       width: 100%;

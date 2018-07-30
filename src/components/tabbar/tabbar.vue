@@ -58,7 +58,7 @@ export default {
 @import './tabbar-style';
 .vuec-tabbar {
   position: $position-type;
-  @include locationEle(none,0,0,0);
+  @include location_ele(none,0,0,0);
   background: #fff;
   width:100%;
   box-sizing: border-box;
@@ -73,7 +73,7 @@ export default {
     width: 100%;
     position: relative;
     &:before {
-      @include border-top-point5-line ($border-color);
+      @include border_top_point5_line ($border_color);
     }
     .vuec-tabar-item {
       height: 100%;
@@ -82,7 +82,7 @@ export default {
       text-align: center;
       position: relative;
       &:after {
-        @include border-left-point5-line;
+        @include border_left_point5_line;
       }
       .tabbar-icon {
         width: $tabbar-icon-width;

@@ -54,7 +54,7 @@ export default {
   .tabBarPage {
     width: 100%;
     height: 100%;
-    background: $demo-background-color;
+    background: $demo_background_color;
     box-sizing: border-box;
     h3 {
       padding-left: px2rem(15px);
@@ -66,7 +66,7 @@ export default {
       height: px2rem(100px);
       position: relative;
       &:after{
-        @include border-bottom-point5-line ($border-color: #d9d9d9);
+        @include border_bottom_point5_line ($border_color: #d9d9d9);
       }
     }
   }

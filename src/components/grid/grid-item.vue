@@ -65,10 +65,10 @@ export default {
   position: relative;
   overflow: hidden;
   &:before {
-    @include border-right-point5-line($border-color);
+    @include border_right_point5_line($border_color);
   }
   &:after {
-    @include border-bottom-point5-line($border-color);
+    @include border_bottom_point5_line($border_color);
   }
   &:hover{
     background: $grid-item-hover-background-color;
