@@ -13,6 +13,8 @@ $browser_default_font_size: 75px !default; // sass 跟聚设计图定义默认re
 $border_color: #d9d9d9;
 $border_1px_top:linear-gradient(90deg, transparent 50%, $border_color 50%); // 左右边框0.5px
 $border_1px_left: linear-gradient(270deg, transparent 50%, $border_color 50%); // 上下边框
+$demo_background_color: #fff;
+
 //sass px 转rem函数
 @function px2rem($px){//$px为需要转换的字号
   @return $px / $browser_default_font_size * 1rem;
@@ -90,5 +92,26 @@ $border_1px_left: linear-gradient(270deg, transparent 50%, $border_color 50%); /
   transform: scaleX(0.5);
 }
 
+//定位上下左右居中
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-$demo_background_color: #fff;
+//定位上下居中
+@mixin up_center_down {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+//定位左右居中
+@mixin left_center_right {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
